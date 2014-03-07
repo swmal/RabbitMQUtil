@@ -1,0 +1,32 @@
+﻿<configuration>
+  <configSections>
+    <section name="rabbitMq" type="RabbitMQUtil.Configuration.RabbitMqConfigSection, RabbitMQUtil" />
+  </configSections>
+  <rabbitMq>
+    <endpoints>
+      <add name="my.subscribing.endpoint" host="localhost" port="" user="" password =""  routingKey="" virtualHost="" pubSubType="Subscribe">
+        <subscription queueName="my.local.queue" noAck="true" durable="true">
+          <exchangeBindings>
+            <add name="my.exchange" type="Fanout" routingKey="" declareExchange="false"></add>
+          </exchangeBindings>
+          <errorConfig errorQueueName="my.error.queue" enableErrorQueue="true"/>
+        </subscription>
+      </add>
+       <add name="my.publishing.endpoint" host="localhost" port="" password="" routingKey="" virtualHost="" pubSubType="Publish">
+        <exchange name="my.exchange" type="Fanout" durable="true"></exchange>
+      </add>
+    </endpoints>
+  </rabbitMq>
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <dependentAssembly>
+        <assemblyIdentity name="RabbitMQ.Client" publicKeyToken="89e7d7c5feba84ce" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-2.8.7.0" newVersion="2.8.7.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Castle.Windsor" publicKeyToken="407dd0808d44fbdc" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-3.1.0.0" newVersion="3.1.0.0" />
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+</configuration>

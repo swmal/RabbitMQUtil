@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>RabbitMQUtil</id>
+    <version>1.0.0</version>
+    <authors>Team TPG</authors>
+    <owners>Team TPG</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <dependencies>
+      <dependency id="log4net" version="2.0.0" />
+      <dependency id="Castle.Core" version="3.0.0" />
+      <dependency id="Castle.Windsor" version="3.1.0" />
+      <dependency id="RabbitMQ.Client" version="2.8.7" />
+    </dependencies>
+    <description>Utility functions for pub/sub with RabbitMQ.</description>
+  </metadata>
+  <files>
+    <file src="RabbitMQUtil\bin\Debug\RabbitMQUtil.dll" target="lib\net40"/>
+  </files>
+</package>

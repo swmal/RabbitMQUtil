@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>RabbitMQUtil.Config</id>
+    <version>1.0.0</version>
+    <authors>Team TPG</authors>
+    <owners>Team TPG</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Utility functions for pub/sub with RabbitMQ. This package contains sample configuration that will be added to your *.config file</description>
+  </metadata>
+  <files>
+    <file src="app.config.transform" target="content"/>
+    <file src="web.config.transform" target="content"/>
+  </files>
+</package>
